@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Anime Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <img src="https://acdn-us.mitiendanube.com/stores/001/994/720/themes/common/logo-233607866-1641950202-f8b2a0c1e1bc969b09ae4ad6904a6e7b1641950203-480-0.png"
+        alt="Logo de Ver Anime Online">
+
+    <ul class="menu">
+        <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#" onclick="mostrarSeccion('catalogo')">Catálogo</a>
+            <ul class="submenu">
+                <li><a onclick="mostrarSeccion('productos')">Productos</a></li>
+                <li><a onclick="mostrarSeccion('video')">Videos</a></li>
+                <li><a onclick="mostrarSeccion('manga')">Mangas</a></li>
+            </ul>
+        </li>
+        <li><a onclick="mostrarSeccion('novedades')">Novedades</a></li>
+        <li><a onclick="mostrarSeccion('contacto')">Contacto</a></li>
+        <!-- Botón del Carrito -->
+        <li id="menuCarrito">
+            <a onclick="mostrarSeccion('carrito')">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+        </li>
+        <li id="userMenu"><a onclick="abrirModal('loginModal')">Iniciar Sesión</a></li>
+        <li id="logoutMenu" style="display:none;"><a onclick="cerrarSesion()">Cerrar Sesión</a></li>
+    </ul>
+
+
+    <!-- Sección de Inicio -->
+    <div id="inicio" class="seccion activo">
+        <h1>Bienvenido a mi Tienda Online</h1>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <img src="https://acdn-us.mitiendanube.com/stores/001/994/720/themes/new_linkedman/2-img-619111502-1727720560-c61a7cb13d6e736c02b7df0c377ec1191727720561-1920-1920.webp" alt="Banner 1">
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/46fe5eef984d14c8d63b157c09b232d8ed05429878ce76daa3f754b9873eefe7165359.jpg" alt="Banner 2">
+            <img src="https://www.buscador.com/wp-content/uploads/2021/07/qu%C3%A9-es-anime.jpg" alt="Banner 3">
+            <img src="https://i.blogs.es/30018b/25-mejores-animes/450_1000.jpg" alt="Banner 4">
+          </div>
+        </div>
+        <br>
+        <p>© 2025 Tienda de Productos. Todos los derechos reservados.</p>
+      </div>
+
+
+
+    <!-- Sección de Catálogo -->
+    <!-- Sección de Catálogo -->
+    <div id="catalogo" class="seccion" style="display: none;">
+        <h2>Catálogo</h2>
+        <p>Explora nuestra colección de animes.</p>
+        <!-- directorio-->
+
+        <div class="catalogo-container">
+            <div class="anime-item">
+                <img src="https://i.gifer.com/Xmoh.gif" alt="Naruto">
+                <h3>Naruto</h3>
+                <p>La historia de un joven ninja que sueña con ser Hokage.</p>
+                <a href="https://www.crunchyroll.com/es/series/GY9PJ5KWR/naruto" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item">
+                <img src="https://i.pinimg.com/736x/bd/78/79/bd7879fa0d556a1adb7d51df35cbb553.jpg" alt="Dragon Ball Z">
+                <h3>Dragon Ball Z</h3>
+                <p>Goku y sus amigos protegen la Tierra de poderosos enemigos.</p>
+                <a href="https://www.crunchyroll.com/es/series/GYQ4MW246/dragon-ball-z" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item">
+                <img src="https://i.pinimg.com/236x/b7/ab/78/b7ab78298c893bef49b394824ad14804.jpg" alt="One Piece">
+                <h3>One Piece</h3>
+                <p>Un pirata busca el legendario tesoro One Piece.</p>
+                <a href="https://www.crunchyroll.com/es/series/GRMG8ZQZR/one-piece" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item">
+                <img src="https://i.pinimg.com/474x/9e/98/61/9e9861348e0c263b79b8658f164b2d29.jpg"
+                    alt="Attack on Titan">
+                <h3>Attack on Titan</h3>
+                <p>La humanidad lucha por sobrevivir contra titanes.</p>
+                <a href="https://www.crunchyroll.com/es/series/GYQ4MW246/attack-on-titan" target="_blank"
+                    class="btn">Ver Anime</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Productos -->
+    <div id="productos" class="seccion" style="display: none;">
+        <h2>Productos de Anime</h2>
+        <p>Descubre los mejores productos de anime para fans.</p>
+
+        <div class="productos-container">
+            <div class="producto-item" data-nombre="Figura de Goku" data-precio="100.00">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/994/720/products/fig11-1-9f7ad7e749aea30e6417284036385539-640-0.webp"
+                    alt="Figura de Goku">
+                <h3>Figura de Goku</h3>
+                <p>Bs100.00</p>
+                <button class="btn agregar-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto-item" data-nombre="Kimono de Zoro de One Piece" data-precio="150.00">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/994/720/products/kim-zoro1-0f94d46f62a136a80616753571743664-320-0.webp"
+                    alt="Camiseta One Piece">
+                <h3>Kimono de Zoro de One Piece</h3>
+                <p>Bs150.00</p>
+                <button class="btn agregar-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto-item" data-nombre="Mochila de Naruto" data-precio="125.00">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/994/720/products/moch209-41-6c6888a6cd18fa14ae16751921354913-640-0.webp"
+                    alt="Mochila de Naruto">
+                <h3>Mochila de Naruto</h3>
+                <p>Bs125</p>
+                <button class="btn agregar-carrito">Agregar al carrito</button>
+            </div>
+
+
+            <div class="producto-item" data-nombre="Llavero katana" data-precio="30.00">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_785367-MLM48906786561_012022-O.webp" alt="Llavero katana">
+                <h3>Llavero metalico katana</h3>
+                <p>Bs30.00</p>
+                <button class="btn agregar-carrito">Agregar al carrito</button>
+            </div>
+
+            <div class="producto-item" data-nombre="Figura de Sao" data-precio="150.00">
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98s-lmjfplrmd2qz15"
+                    alt="Figura de Sao">
+                <h3>Figura de Sao</h3>
+                <p>Bs150.00</p>
+                <button class="btn agregar-carrito">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección del Carrito -->
+    <div id="carrito" class="seccion">
+        <h2>🛒 Carrito de Compras</h2>
+
+        <!-- Contenedor del carrito -->
+        <div class="carrito-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito">
+                    <!-- Los productos se insertarán aquí dinámicamente -->
+                </tbody>
+            </table>
+
+            <p><strong>Total a pagar: Bs<span id="total-carrito">0.00</span></strong></p>
+
+            <!-- Botones de acción -->
+            <div class="carrito-botones">
+                <button class="btn" onclick="vaciarCarrito()">🗑 Vaciar Carrito</button>
+                <button class="btn comprar-btn" onclick="abrirModal('modalPago')">✅ Comprar</button>
+                <button id="verHistorial" onclick="mostrarHistorialCompras()">Ver historial de compras</button>
+            </div>
+        </div>
+
+        <!-- Sección del Historial de Compras (inicialmente oculta) -->
+        <div id="historial-compras" style="display: none; margin-top: 30px;">
+            <h3>Historial de Compras</h3>
+            <button id="cerrar-historial" onclick="ocultarHistorial()">Cerrar Historial</button>
+            <div id="historial-lista" class="historial-lista">
+                <!-- Aquí se mostrará dinámicamente el historial -->
+            </div>
+        </div>
+    </div>
+
+
+    <!--Seccion Video-->
+    <div id="video" class="seccion">
+        <h2>Videos de Anime</h2>
+        <p>Aquí puedes ver los mejores videos de anime.</p>
+
+        <!-- Selector de Género -->
+        <label for="filtro-genero">Filtrar por Género:</label>
+        <select id="filtro-genero">
+            <option value="todos">Todos</option>
+            <option value="accion">Acción</option>
+            <option value="aventura">Aventura</option>
+            <option value="shonen">Shonen</option>
+            <option value="fantasia">Fantasía</option>
+        </select>
+        <div>
+            <button id="btn-filtrar" type="button">Filtrar</button>
+        </div>
+
+        <!-- Contenedor de Animes -->
+        <div class="catalogo-container">
+            <div class="anime-item" data-genero="shonen aventura">
+                <img src="https://i.pinimg.com/originals/cd/0f/e5/cd0fe564c31f6475053235b1c71953b1.gif" alt="Naruto">
+                <h3>Naruto</h3>
+                <p>La historia de un joven ninja que sueña con ser Hokage.</p>
+                <p><strong>Género:</strong> Shonen, Aventura</p>
+                <a href="https://www.crunchyroll.com/es/series/GY9PJ5KWR/naruto" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item" data-genero="accion aventura">
+                <img src="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/g/gohan-gif.gif" alt="Dragon Ball Z">
+                <h3>Dragon Ball Z</h3>
+                <p>Goku y sus amigos protegen la Tierra de poderosos enemigos.</p>
+                <p><strong>Género:</strong> Acción, Aventura</p>
+                <a href="https://www.crunchyroll.com/es/series/GYQ4MW246/dragon-ball-z" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item" data-genero="aventura fantasia">
+                <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/06/17/16554898538422.gif"
+                    alt="One Piece">
+                <h3>One Piece</h3>
+                <p>Un pirata busca el legendario tesoro One Piece.</p>
+                <p><strong>Género:</strong> Aventura, Fantasía</p>
+                <a href="https://www.crunchyroll.com/es/series/GRMG8ZQZR/one-piece" target="_blank" class="btn">Ver
+                    Anime</a>
+            </div>
+
+            <div class="anime-item" data-genero="accion">
+                <img src="https://i.gifer.com/B9Ov.gif" alt="Attack on Titan">
+                <h3>Attack on Titan</h3>
+                <p>La humanidad lucha por sobrevivir contra titanes.</p>
+                <p><strong>Género:</strong> Acción</p>
+                <a href="https://www.crunchyroll.com/es/series/GYQ4MW246/attack-on-titan" target="_blank"
+                    class="btn">Ver Anime</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección de Mangas en Español -->
+    <div id="manga" class="seccion" style="display: none;">
+        <h2>📖 Mangas en Español</h2>
+        <p>Explora una gran selección de mangas disponibles en español.</p>
+
+        <div class="manga-container">
+            <!-- Manga 1 -->
+            <div class="manga-item">
+                <img src="https://i.pinimg.com/736x/9f/e7/01/9fe701bc80f12e90b6b34dc94fd12b37.jpg" alt="Naruto">
+                <div class="manga-info">
+                    <h3>Naruto</h3>
+                    <p>La historia de Naruto Uzumaki en su camino para ser Hokage.</p>
+                    <a href="https://lectortmo.com/library/manga/12345/naruto" target="_blank" class="btn">Leer
+                        en
+                        TMO</a>
+                </div>
+            </div>
+
+            <!-- Manga 2 -->
+            <div class="manga-item">
+                <img src="https://www.normaeditorial.com/upload/media/albumes/0001/29/thumb_28527_albumes_medium.jpeg"
+                    alt="Jujutsu Kaisen">
+                <div class="manga-info">
+                    <h3>Jujutsu Kaisen</h3>
+                    <p>La historia de Yuji Itadori en el mundo de las maldiciones.</p>
+                    <a href="https://lectortmo.com/library/manga/67890/jujutsu-kaisen" target="_blank" class="btn">Leer
+                        en TMO</a>
+                </div>
+            </div>
+
+            <!-- Manga 3 -->
+            <div class="manga-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA96wDL6L2hufdQ1ZNiNyiVnodmiFmntJuuA&s"
+                    alt="One Piece">
+                <div class="manga-info">
+                    <h3>One Piece</h3>
+                    <p>Acompaña a Luffy y su tripulación en la búsqueda del One Piece.</p>
+                    <a href="https://mangadex.org/title/3b67b1d6-0b12-4eae-a8f3-9f17b0c19a99/one-piece" target="_blank"
+                        class="btn">Leer en MangaDex</a>
+                </div>
+            </div>
+
+            <!-- Manga 4 -->
+            <div class="manga-item">
+                <img src="https://external-preview.redd.it/TNg-MlI8PBd-nxtu1chUlAbwM3kdAggGDfLhp1XU7wY.jpg?auto=webp&s=9f5d035357832340815f5500108206ce9d523c57"
+                    alt="Chainsaw Man">
+                <div class="manga-info">
+                    <h3>Chainsaw Man</h3>
+                    <p>Denji, un joven cazador de demonios, lucha por una vida mejor.</p>
+                    <a href="https://mangadex.org/title/5ebf99b1-0f3a-4a1b-91c2-69bf4843f432/chainsaw-man"
+                        target="_blank" class="btn">Leer en MangaDex</a>
+                </div>
+            </div>
+
+            <!-- Manga 5 -->
+            <div class="manga-item">
+                <img src="https://i.pinimg.com/236x/26/ec/18/26ec18bbb1141adaabdb7b4ce69bc404.jpg"
+                    alt="Tokyo Revengers">
+                <div class="manga-info">
+                    <h3>Tokyo Revengers</h3>
+                    <p>Un hombre viaja en el tiempo para cambiar el destino de sus amigos.</p>
+                    <a href="https://lectortmo.com/library/manga/54321/tokyo-revengers" target="_blank" class="btn">Leer
+                        en TMO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sección de Novedades -->
+    <div id="novedades" class="seccion" style="display: none;">
+        <h2>📢 Novedades</h2>
+        <p>Descubre las últimas novedades de anime. Mantente al tanto de nuevos episodios, lanzamientos y más.
+        </p>
+
+        <div class="novedades-container">
+            <!-- Novedad 1 -->
+            <div class="novedad-item">
+                <img src="https://images.justwatch.com/poster/320152922/s718/temporada-4.jpg" alt="Attack on Titan">
+                <div class="novedad-info">
+                    <h3>🔥 Nuevo Episodio de "Attack on Titan"</h3>
+                    <p>El emocionante final de "Attack on Titan" ha llegado. No te lo pierdas.</p>
+                    <a href="https://www.crunchyroll.com/es/series/GR751KNZY/attack-on-titan" target="_blank"
+                        class="btn">Ver Más</a>
+                </div>
+            </div>
+
+            <!-- Novedad 2 -->
+            <div class="novedad-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJMSvinCDaqC7bK5AAYK0LrOpe26u6kpUuuA&s"
+                    alt="Demon Slayer">
+                <div class="novedad-info">
+                    <h3>⚔️ Nueva Temporada de "Demon Slayer"</h3>
+                    <p>"Demon Slayer" regresa con una nueva historia llena de acción y emoción.</p>
+                    <a href="https://www.crunchyroll.com/es/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba"
+                        target="_blank" class="btn">Ver Más</a>
+                </div>
+            </div>
+
+            <!-- Novedad 3 -->
+            <div class="novedad-item">
+                <img src="https://jumpg-assets.tokyo-cdn.com/secure/title/100140/title_thumbnail_portrait_list/326451.jpg?hash=nYvWfNjfa4kw58G27Ip4zQ&expires=2145884400"
+                    alt="One Piece Manga">
+                <div class="novedad-info">
+                    <h3>🏴‍☠️ Nuevo Capítulo de "One Piece"</h3>
+                    <p>¡Luffy sigue su aventura! Lee el nuevo capítulo de "One Piece".</p>
+                    <a href="https://mangaplus.shueisha.co.jp/titles/100140" target="_blank" class="btn">Leer
+                        Más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección de Contacto -->
+    <div id="contacto" class="seccion" style="display: none;">
+        <h2>📩 Contáctanos</h2>
+        <p>Si tienes alguna pregunta o sugerencia, envíanos un mensaje y te responderemos lo antes posible.</p>
+
+        <!-- Código QR de WhatsApp -->
+        <div class="qr-whatsapp">
+            <h3>📱 Escanea para chatear</h3>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/1234567890"
+                alt="QR WhatsApp">
+        </div>
+
+        <!-- Botones de contacto directo -->
+        <div class="contacto-botones">
+            <a href="https://wa.me/1234567890" target="_blank" class="btn btn-whatsapp">💬 Chatear en
+                WhatsApp</a>
+            <a href="https://www.google.com/maps?q=nombre+de+tu+ubicacion" target="_blank" class="btn btn-maps">📍
+                Ver en Google Maps</a>
+        </div>
+    </div>
+
+    <!-- Panel oculto para el administrador -->
+    <div id="panel-admin"
+        style="display: none; background: #f8f8f8; border: 2px solid #333; padding: 20px; margin: 20px;">
+        <h3>👑 Panel de Administrador</h3>
+        <p>Bienvenido, administrador. Aquí puedes ver opciones especiales.</p>
+        <ul>
+            <li><button onclick="alert('Gestión de productos no disponible aún.')">📦 Gestionar productos</button></li>
+            <li><button onclick="alert('Revisión de usuarios no disponible aún.')">👥 Ver usuarios registrados</button>
+            </li>
+            <li><button onclick="alert('Estadísticas no disponible aún.')">📊 Ver estadísticas</button></li>
+        </ul>
+    </div>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Iniciar Sesión</h2>
+            <div class="input-box">
+                <input type="email" id="emailLogin" placeholder="Ingresa tu Email">
+            </div>
+            <div class="input-box">
+                <input type="password" id="passwordLogin" placeholder="Ingresa tu Contraseña">
+            </div>
+            <button class="btn" onclick="validarLogin()">Iniciar Sesión</button>                 
+
+            <!-- Separación de los botones con un margen -->
+            <button class="btn" onclick="cerrarModal('loginModal')" style="margin-top: 10px;">Cerrar</button>
+
+            <p>¿No tienes cuenta? <a onclick="abrirModal('registroModal')" style="color: #2d0ecd;">Regístrate
+                    aquí</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registroModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Registrarse</h2>
+            <div class="input-box">
+                <input type="email" id="emailRegistro" placeholder="Ingresa tu Email">
+            </div>
+            <div class="input-box">
+                <input type="password" id="passwordRegistro" placeholder="Ingresa tu Contraseña">
+            </div>
+            <div class="input-box">
+                <input type="password" id="confirmPassword" placeholder="Confirma tu Contraseña">
+            </div>
+
+            <button class="btn" onclick="registrarUsuario()" style="margin-top: 10px;">Registrarse</button>
+            <button class="btn" onclick="cerrarModal('registroModal')" style="margin-top: 10px;">Cerrar</button>
+        </div>
+    </div>
+    <!-- Modal de Pago -->
+    <div id="modalPago" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalPago')">&times;</span>
+            <h2>Confirmación de Pago</h2>
+            <p>¿Estás seguro de que deseas realizar el pago?</p>
+            <button onclick="simularPago()">Realizar Pago</button>
+        </div>
+    </div>
+
+
+
+    <script src="Funciones.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guilty Gear Strive: Dual Rulers</title>
+  <style>
+   body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tag {
+  background: #00bcd4;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.detalle-anime {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.poster {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.sinopsis {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.genero {
+  display: inline-block;
+  background: #2196f3;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.estado {
+  margin-top: 20px;
+}
+
+.emision {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: default;
+  font-weight: bold;
+}
+
+.acciones {
+  margin-top: 10px;
+}
+
+.acciones button {
+  background-color: #eee;
+  border: none;
+  margin-right: 10px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.episodios {
+  margin-top: 40px;
+}
+
+.episodio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.thumb {
+  width: 120px;
+  height: 70px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.info-episodio {
+  flex: 1;
+}
+
+.play {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.visto {
+  font-size: 14px;
+}
+
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Naruto <span class="tag">ANIME</span></h1>
+      </header>
+  
+      <section class="detalle-anime">
+        <img src="https://www3.animeflv.net/uploads/animes/covers/2.jpg" alt="Naruto" class="poster">
+  
+        <div class="info">
+          <article class="sinopsis">
+            <h2>Sinopsis</h2>
+            <span class="genero">Acción</span>
+            <p>
+              Naruto Uzumaki es un ninja adolescente que tiene encerrado en su interior al «Zorro de Nueve Colas» (Kyūbi no Kitsune), que, doce años antes del inicio de la serie, atacó a la Aldea Oculta de la Hoja, matando a muchas personas en el proceso.
+            </p>
+            <p>
+              Como consecuencia, el líder de la aldea, el Cuarto Hokage, sacrificó su vida utilizando el Shiki Fūjin para sellarlo dentro de Naruto cuando este era un recién nacido, con lo que esperaba detener la masacre.
+            </p>
+            <p>
+              Por ello, Naruto fue víctima de maltratos por quienes lo consideraban el propio zorro.
+            </p>
+          </article>
+  
+          <div class="estado">
+            <button class="emision">🟢 EN EMISIÓN</button>
+            <div class="acciones">
+              <button class="fav">❤️ Agregar a favoritos</button>
+              <button class="seguir">✔️ Seguir</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="episodios">
+        <h2>Lista de episodios</h2>
+  
+        <div class="episodio">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7DOdODtXhpmRIFmdUYADyNHgJrf0lVUPOLA&s" class="thumb" alt="Thumb episodio 1">
+          <div class="info-episodio">
+            <strong>Naruto</strong> <br>
+            <span>Capítulo 1</span>
+          </div>
+        </div>
+  
+        <div class="episodio">
+          <button class="play">▶️</button>
+          <div class="info-episodio">
+            <strong>Guilty Gear Strive: Dual Rulers</strong><br>
+            <span>Episodio 1</span>
+          </div>
+          <label class="visto">
+            <input type="checkbox"> No visto
+          </label>
+        </div>
+      </section>
+    </div>
+  </body>  
+</html>
